@@ -5,7 +5,7 @@ function App() {
     <div className="site-wrapper">
       <header className="hero">
         <p className="eyebrow">Portfolio</p>
-        <h1>Your Name</h1>
+        <h1>Emeka Ohumaegbulem</h1>
         <p className="hero-text">
           I design and build 3D models, product concepts, and clean web experiences.
           This site shows my best work and how to contact me.
@@ -54,7 +54,7 @@ function App() {
         <section className="card" id="contact">
           <h2>Contact</h2>
           <p>
-            Email: <a href="mailto:yourname@email.com">yourname@email.com</a>
+            Email: <a href="mailto:mekaohums@gmail.com">mekaohums@gmail.com</a>
           </p>
           <p>
             GitHub: <a href="https://github.com/edo230000">github.com/edo230000</a>
@@ -63,7 +63,7 @@ function App() {
       </main>
 
       <footer>
-        <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Emeka Ohumaegbulem. All rights reserved.</p>
       </footer>
     </div>
   )
