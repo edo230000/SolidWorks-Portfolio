@@ -1,0 +1,87 @@
+.site-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #475569;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.hero-text {
+  max-width: 700px;
+  margin: 1rem auto;
+  color: #334155;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 0.7rem 1.1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.button:hover {
+  background: #1d4ed8;
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 10px 20px -18px rgba(15, 23, 42, 0.45);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+.project {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.8rem;
+  background: #f8fafc;
+}
+
+.project h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+}
+
+footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #475569;
+  font-size: 0.9rem;
+}
