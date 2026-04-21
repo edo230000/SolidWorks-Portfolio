@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import { HashRouter, Link, Route, Routes } from 'react-router-dom'
 import { useState } from 'react'
 import profilePhoto from './assets/profile.png'
 import dispenserImageOne from './assets/dispenser-1.png'
@@ -516,12 +516,12 @@ function SolidWorksPage() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/solidworks" element={<SolidWorksPage />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
