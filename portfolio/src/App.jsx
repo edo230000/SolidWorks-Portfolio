@@ -229,13 +229,14 @@ function SolidWorksPage() {
           <div className="download-row" role="note" aria-label="Prototype assembly download">
             <a
               className="button button-secondary download-button"
-              href="/downloads/prototype-assembly.zip"
-              download
+              href="https://drive.google.com/drive/folders/1ytkklSkR6oxeHHQtrWyzgGPTq_SXvYgc?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
             >
-              Download Prototype Assembly (.zip)
+              Open Prototype Assembly (Google Drive)
             </a>
             <p className="download-note">
-              Includes the SolidWorks prototype assembly files for review.
+              Contains the SolidWorks prototype assembly files for review.
             </p>
           </div>
           <div className="overview-layout">
