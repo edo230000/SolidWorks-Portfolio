@@ -14,6 +14,15 @@ import cupHolderImageOne from './assets/cup-holder-1.png'
 import cupHolderImageTwo from './assets/cup-holder-2.png'
 import nozzleHeadImageOne from './assets/nozzle-head-1.png'
 import nozzleHeadImageTwo from './assets/nozzle-head-2.png'
+import legoAssemblyImageOne from './assets/lego-assembly-1.png'
+import legoAssemblyImageTwo from './assets/lego-assembly-2.png'
+import legoDrawingImageOne from './assets/lego-drawing-1.png'
+import legoDrawingImageTwo from './assets/lego-drawing-2.png'
+import caliperLidCaseImageOne from './assets/caliper-lid-case-1.png'
+import linkingAssemblyImageOne from './assets/linking-assembly-1.png'
+import linkingAssemblyImageTwo from './assets/linking-assembly-2.png'
+import gearRackImageOne from './assets/gear-rack-1.png'
+import steeringMountImageOne from './assets/steering-mount-1.png'
 
 function HomePage() {
   return (
@@ -117,11 +126,23 @@ function SolidWorksPage() {
   ]
   const cupHolderImages = [cupHolderImageOne, cupHolderImageTwo]
   const nozzleHeadImages = [nozzleHeadImageOne, nozzleHeadImageTwo]
+  const legoAssemblyImages = [legoAssemblyImageOne, legoAssemblyImageTwo]
+  const legoDrawingImages = [legoDrawingImageOne, legoDrawingImageTwo]
+  const caliperLidCaseImages = [caliperLidCaseImageOne]
+  const linkingAssemblyImages = [linkingAssemblyImageOne, linkingAssemblyImageTwo]
+  const gearRackImages = [gearRackImageOne]
+  const steeringMountImages = [steeringMountImageOne]
   const [activeImage, setActiveImage] = useState(0)
   const [activeHousingImage, setActiveHousingImage] = useState(0)
   const [activeContainerImage, setActiveContainerImage] = useState(0)
   const [activeCupHolderImage, setActiveCupHolderImage] = useState(0)
   const [activeNozzleHeadImage, setActiveNozzleHeadImage] = useState(0)
+  const [activeLegoAssemblyImage, setActiveLegoAssemblyImage] = useState(0)
+  const [activeLegoDrawingImage, setActiveLegoDrawingImage] = useState(0)
+  const [activeCaliperLidCaseImage, setActiveCaliperLidCaseImage] = useState(0)
+  const [activeLinkingAssemblyImage, setActiveLinkingAssemblyImage] = useState(0)
+  const [activeGearRackImage, setActiveGearRackImage] = useState(0)
+  const [activeSteeringMountImage, setActiveSteeringMountImage] = useState(0)
 
   const goToPreviousImage = () => {
     setActiveImage((current) =>
@@ -180,6 +201,78 @@ function SolidWorksPage() {
   const goToNextNozzleHeadImage = () => {
     setActiveNozzleHeadImage((current) =>
       current === nozzleHeadImages.length - 1 ? 0 : current + 1,
+    )
+  }
+
+  const goToPreviousLegoAssemblyImage = () => {
+    setActiveLegoAssemblyImage((current) =>
+      current === 0 ? legoAssemblyImages.length - 1 : current - 1,
+    )
+  }
+
+  const goToNextLegoAssemblyImage = () => {
+    setActiveLegoAssemblyImage((current) =>
+      current === legoAssemblyImages.length - 1 ? 0 : current + 1,
+    )
+  }
+
+  const goToPreviousLegoDrawingImage = () => {
+    setActiveLegoDrawingImage((current) =>
+      current === 0 ? legoDrawingImages.length - 1 : current - 1,
+    )
+  }
+
+  const goToNextLegoDrawingImage = () => {
+    setActiveLegoDrawingImage((current) =>
+      current === legoDrawingImages.length - 1 ? 0 : current + 1,
+    )
+  }
+
+  const goToPreviousCaliperLidCaseImage = () => {
+    setActiveCaliperLidCaseImage((current) =>
+      current === 0 ? caliperLidCaseImages.length - 1 : current - 1,
+    )
+  }
+
+  const goToNextCaliperLidCaseImage = () => {
+    setActiveCaliperLidCaseImage((current) =>
+      current === caliperLidCaseImages.length - 1 ? 0 : current + 1,
+    )
+  }
+
+  const goToPreviousLinkingAssemblyImage = () => {
+    setActiveLinkingAssemblyImage((current) =>
+      current === 0 ? linkingAssemblyImages.length - 1 : current - 1,
+    )
+  }
+
+  const goToNextLinkingAssemblyImage = () => {
+    setActiveLinkingAssemblyImage((current) =>
+      current === linkingAssemblyImages.length - 1 ? 0 : current + 1,
+    )
+  }
+
+  const goToPreviousGearRackImage = () => {
+    setActiveGearRackImage((current) =>
+      current === 0 ? gearRackImages.length - 1 : current - 1,
+    )
+  }
+
+  const goToNextGearRackImage = () => {
+    setActiveGearRackImage((current) =>
+      current === gearRackImages.length - 1 ? 0 : current + 1,
+    )
+  }
+
+  const goToPreviousSteeringMountImage = () => {
+    setActiveSteeringMountImage((current) =>
+      current === 0 ? steeringMountImages.length - 1 : current - 1,
+    )
+  }
+
+  const goToNextSteeringMountImage = () => {
+    setActiveSteeringMountImage((current) =>
+      current === steeringMountImages.length - 1 ? 0 : current + 1,
     )
   }
 
@@ -505,6 +598,316 @@ function SolidWorksPage() {
                 the upstream tubing or pump line. The form factor balances hydraulic
                 flow intent with spatial constraints imposed by the overall device
                 envelope.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="card">
+          <h2>Academic Coursework</h2>
+          <p>
+            These are class-driven CAD and documentation builds where the focus is on
+            clean modeling practices, stable feature design, and manufacturing-ready
+            drawings.
+          </p>
+        </section>
+
+        <section className="card">
+          <h2>LEGO Assembly - Model + Drawings</h2>
+          <div className="overview-layout">
+            <div className="carousel-column">
+              <div className="overview-image image-fit-full" aria-label="LEGO assembly model carousel">
+                <button
+                  type="button"
+                  className="carousel-arrow left"
+                  onClick={goToPreviousLegoAssemblyImage}
+                  aria-label="Previous LEGO assembly image"
+                >
+                  &#8592;
+                </button>
+                <img
+                  src={legoAssemblyImages[activeLegoAssemblyImage]}
+                  alt={`LEGO assembly render ${activeLegoAssemblyImage + 1}`}
+                  className="carousel-image"
+                />
+                <button
+                  type="button"
+                  className="carousel-arrow right"
+                  onClick={goToNextLegoAssemblyImage}
+                  aria-label="Next LEGO assembly image"
+                >
+                  &#8594;
+                </button>
+              </div>
+              <p className="carousel-caption">assembly render</p>
+              <div className="carousel-dots" aria-label="LEGO assembly carousel indicators">
+                {legoAssemblyImages.map((_, index) => (
+                  <button
+                    type="button"
+                    key={`lego-assembly-dot-${index}`}
+                    className={`carousel-dot ${index === activeLegoAssemblyImage ? 'active' : ''}`}
+                    onClick={() => setActiveLegoAssemblyImage(index)}
+                    aria-label={`Go to LEGO assembly image ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="overview-textbox">
+              <p>
+                A SolidWorks assembly exercise focused on creating consistent stud
+                geometry, capturing design intent with stable features, and producing
+                a clean, presentation-ready render. The final model emphasizes
+                symmetry, reference plane discipline, and predictable rebuild behavior.
+              </p>
+            </div>
+          </div>
+
+          <div className="overview-layout" style={{ marginTop: '1.2rem' }}>
+            <div className="carousel-column">
+              <div className="overview-image image-fit-full" aria-label="LEGO drawings carousel">
+                <button
+                  type="button"
+                  className="carousel-arrow left"
+                  onClick={goToPreviousLegoDrawingImage}
+                  aria-label="Previous LEGO drawing image"
+                >
+                  &#8592;
+                </button>
+                <img
+                  src={legoDrawingImages[activeLegoDrawingImage]}
+                  alt={`LEGO technical drawing ${activeLegoDrawingImage + 1}`}
+                  className="carousel-image"
+                />
+                <button
+                  type="button"
+                  className="carousel-arrow right"
+                  onClick={goToNextLegoDrawingImage}
+                  aria-label="Next LEGO drawing image"
+                >
+                  &#8594;
+                </button>
+              </div>
+              <p className="carousel-caption">technical drawings</p>
+              <div className="carousel-dots" aria-label="LEGO drawings carousel indicators">
+                {legoDrawingImages.map((_, index) => (
+                  <button
+                    type="button"
+                    key={`lego-drawing-dot-${index}`}
+                    className={`carousel-dot ${index === activeLegoDrawingImage ? 'active' : ''}`}
+                    onClick={() => setActiveLegoDrawingImage(index)}
+                    aria-label={`Go to LEGO drawing ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="overview-textbox">
+              <p>
+                Completed drawing sheets include orthographic views, an isometric
+                reference, and dimension callouts for key features. The drawings are
+                formatted to communicate part geometry clearly and reinforce proper
+                documentation habits.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="card">
+          <h2>Caliper Lid Case</h2>
+          <div className="overview-layout">
+            <div className="carousel-column">
+              <div className="overview-image image-fit-full" aria-label="Caliper lid case carousel">
+                <button
+                  type="button"
+                  className="carousel-arrow left"
+                  onClick={goToPreviousCaliperLidCaseImage}
+                  aria-label="Previous caliper lid case image"
+                >
+                  &#8592;
+                </button>
+                <img
+                  src={caliperLidCaseImages[activeCaliperLidCaseImage]}
+                  alt={`Caliper lid case render ${activeCaliperLidCaseImage + 1}`}
+                  className="carousel-image"
+                />
+                <button
+                  type="button"
+                  className="carousel-arrow right"
+                  onClick={goToNextCaliperLidCaseImage}
+                  aria-label="Next caliper lid case image"
+                >
+                  &#8594;
+                </button>
+              </div>
+              <p className="carousel-caption">caliper lid case render</p>
+              <div className="carousel-dots" aria-label="Caliper lid case carousel indicators">
+                {caliperLidCaseImages.map((_, index) => (
+                  <button
+                    type="button"
+                    key={`caliper-lid-case-dot-${index}`}
+                    className={`carousel-dot ${index === activeCaliperLidCaseImage ? 'active' : ''}`}
+                    onClick={() => setActiveCaliperLidCaseImage(index)}
+                    aria-label={`Go to caliper lid case image ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="overview-textbox">
+              <p>
+                A protective lid case concept focused on clean edge breaks, consistent
+                wall thickness, and print-ready geometry. The design highlights
+                controlled fillets, recessed detailing, and a simple parting strategy
+                for reliable manufacturing.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="card">
+          <h2>Linking Assembly</h2>
+          <div className="overview-layout">
+            <div className="carousel-column">
+              <div className="overview-image image-fit-full" aria-label="Linking assembly carousel">
+                <button
+                  type="button"
+                  className="carousel-arrow left"
+                  onClick={goToPreviousLinkingAssemblyImage}
+                  aria-label="Previous linking assembly image"
+                >
+                  &#8592;
+                </button>
+                <img
+                  src={linkingAssemblyImages[activeLinkingAssemblyImage]}
+                  alt={`Linking assembly render ${activeLinkingAssemblyImage + 1}`}
+                  className="carousel-image"
+                />
+                <button
+                  type="button"
+                  className="carousel-arrow right"
+                  onClick={goToNextLinkingAssemblyImage}
+                  aria-label="Next linking assembly image"
+                >
+                  &#8594;
+                </button>
+              </div>
+              <p className="carousel-caption">linking assembly render</p>
+              <div className="carousel-dots" aria-label="Linking assembly carousel indicators">
+                {linkingAssemblyImages.map((_, index) => (
+                  <button
+                    type="button"
+                    key={`linking-assembly-dot-${index}`}
+                    className={`carousel-dot ${index === activeLinkingAssemblyImage ? 'active' : ''}`}
+                    onClick={() => setActiveLinkingAssemblyImage(index)}
+                    aria-label={`Go to linking assembly image ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="overview-textbox">
+              <p>
+                A linkage-style assembly exercise emphasizing mate strategy, clearance
+                planning, and robust part relationships. The model focuses on clean
+                interfaces between components and predictable motion constraints.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="card">
+          <h2>Gear Rack (Railing)</h2>
+          <div className="overview-layout">
+            <div className="carousel-column">
+              <div className="overview-image image-fit-full" aria-label="Gear rack carousel">
+                <button
+                  type="button"
+                  className="carousel-arrow left"
+                  onClick={goToPreviousGearRackImage}
+                  aria-label="Previous gear rack image"
+                >
+                  &#8592;
+                </button>
+                <img
+                  src={gearRackImages[activeGearRackImage]}
+                  alt={`Gear rack render ${activeGearRackImage + 1}`}
+                  className="carousel-image"
+                />
+                <button
+                  type="button"
+                  className="carousel-arrow right"
+                  onClick={goToNextGearRackImage}
+                  aria-label="Next gear rack image"
+                >
+                  &#8594;
+                </button>
+              </div>
+              <p className="carousel-caption">gear rack part</p>
+              <div className="carousel-dots" aria-label="Gear rack carousel indicators">
+                {gearRackImages.map((_, index) => (
+                  <button
+                    type="button"
+                    key={`gear-rack-dot-${index}`}
+                    className={`carousel-dot ${index === activeGearRackImage ? 'active' : ''}`}
+                    onClick={() => setActiveGearRackImage(index)}
+                    aria-label={`Go to gear rack image ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="overview-textbox">
+              <p>
+                A gear rack modeling exercise focused on consistent tooth spacing,
+                repeatable feature patterns, and clean reference geometry for stable
+                rebuilds.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="card">
+          <h2>Steering Mount (UTD Formula Racing)</h2>
+          <div className="overview-layout">
+            <div className="carousel-column">
+              <div className="overview-image image-fit-full" aria-label="Steering mount carousel">
+                <button
+                  type="button"
+                  className="carousel-arrow left"
+                  onClick={goToPreviousSteeringMountImage}
+                  aria-label="Previous steering mount image"
+                >
+                  &#8592;
+                </button>
+                <img
+                  src={steeringMountImages[activeSteeringMountImage]}
+                  alt={`Steering mount render ${activeSteeringMountImage + 1}`}
+                  className="carousel-image"
+                />
+                <button
+                  type="button"
+                  className="carousel-arrow right"
+                  onClick={goToNextSteeringMountImage}
+                  aria-label="Next steering mount image"
+                >
+                  &#8594;
+                </button>
+              </div>
+              <p className="carousel-caption">steering mount render</p>
+              <div className="carousel-dots" aria-label="Steering mount carousel indicators">
+                {steeringMountImages.map((_, index) => (
+                  <button
+                    type="button"
+                    key={`steering-mount-dot-${index}`}
+                    className={`carousel-dot ${index === activeSteeringMountImage ? 'active' : ''}`}
+                    onClick={() => setActiveSteeringMountImage(index)}
+                    aria-label={`Go to steering mount image ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="overview-textbox">
+              <p>
+                A steering mount component created during my time with the UTD Formula
+                Racing team. The design focuses on compact packaging, clean
+                mounting interfaces, and consistent features for reliable manufacturing
+                and assembly.
               </p>
             </div>
           </div>
